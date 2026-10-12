@@ -1,7 +1,7 @@
 {
-  "name": "Lịch Dạy",
-  "short_name": "Lịch Dạy",
-  "description": "Lịch dạy, chấm giờ tính tiền và nhật ký buổi học",
+  "name": "PenSpace",
+  "short_name": "PenSpace",
+  "description": "Quản lý công việc, tick là tính tiền, thu nhập theo nguồn",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

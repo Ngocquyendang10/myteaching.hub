@@ -126,6 +126,7 @@ h1,h2,h3,h4,.num{font-family:'Nunito','Plus Jakarta Sans',sans-serif}
 @media (max-width:720px){.ck-modal{grid-template-columns:1fr}
 .ck-pay{grid-template-columns:1fr;justify-items:center;text-align:center}}
 @media (max-width:640px){.seg button{padding:0 9px}}
+@media (max-width:900px){.toast{bottom:calc(86px + env(safe-area-inset-bottom))}}
 @media print{body{overflow:visible;background:#fff}}
 </style>
 </head>
@@ -200,7 +201,7 @@ const payCfg = () => db.settings.pay || {};
 function transferNote(c, ym) { const tpl = payCfg().note || 'HP T{thang} {lop}'; return noAccent(tpl.replace('{thang}', +ym.slice(5)).replace('{nam}', ym.slice(0, 4)).replace('{lop}', c.short || shortName(c.name)).replace('{hocvien}', c.student || '')).toUpperCase().slice(0, 50); }
 function monthBlock(c, ym, onlyDone) {
   const idx = sessionIndex(c), from = ym + '-01', to = endOfMonth(from);
-  const occ = occurrences(from, to, { all: true }).filter(o => o.classId === c.id && occStatus(o) !== 'cancel');
+  const occ = occurrences(from, to, { all: true }).filter(o => o.classId === c.id && !o.lump && occStatus(o) !== 'cancel');
   const rows = occ.filter(o => onlyDone ? counted(occStatus(o)) : (counted(occStatus(o)) || occStatus(o) === 'upcoming')).map(o => { const r = o.rec || {}; return { n: idx[o.key] || 0, date: o.date, start: o.start, end: m2t(t2m(o.start) + o.dur), hours: billHours(o), done: counted(occStatus(o)), taught: r.taught || '', homework: r.homework || '', links: (r.links || []).map(l => ({ url: l.url, title: l.title || '' })) }; });
   const done = rows.filter(r => r.done), totalH = done.reduce((a, r) => a + r.hours, 0), rate = rateFor(c, ym);
   return { ym, rows, sessions: done.length, totalH, rate, amount: totalH * rate, note: transferNote(c, ym) };
@@ -223,7 +224,7 @@ function checklistHTML(info, mb, show, qr) {
       <div class="ck-h2">${fmtH(r.hours)}h${r.done ? COIN_IMG : ''}</div></div>`).join('') : '<div class="ck-empty">Chưa có buổi học nào trong tháng này.</div>'}</div>
     ${show.fee ? `<div class="ck-total"><span>Tổng học phí<br>${fmtH(mb.totalH)} giờ × ${money(mb.rate)}</span><b>${money(mb.amount)}</b></div>
       ${info.bank && info.bank.acct ? `<div class="ck-pay">${qr ? `<img src="${qr}" alt="QR chuyển khoản">` : '<span></span>'}<div><span>Ngân hàng</span> <b>${esc(info.bank.bankName || '')}</b><br><span>Số tài khoản</span> <b>${esc(info.bank.acct)}</b><br>${info.bank.holder ? `<span>Chủ tài khoản</span> <b>${esc(info.bank.holder)}</b><br>` : ''}<span>Nội dung CK</span><br><span class="ck-note">${esc(mb.note)}</span></div></div>` : ''}` : ''}
-    <div class="ck-f">Cập nhật ${new Date().toLocaleDateString('vi-VN')} · Lịch Dạy</div></div>`;
+    <div class="ck-f">Cập nhật ${new Date().toLocaleDateString('vi-VN')}</div></div>`;
 }
 function classInfo(c) { const p = payCfg(); return { name: c.name, student: c.student || '', color: c.color, teacher: p.teacher || '', bank: p.acct ? { bin: p.bin, bankName: (BANKS.find(b => b[0] === p.bin) || [, ''])[1], acct: p.acct, holder: p.holder || '' } : null }; }
 async function payQR(info, mb) { if (!info.bank || !info.bank.acct || !info.bank.bin || !mb.amount) return ''; try { return await qrDataURL(vietQR(info.bank.bin, info.bank.acct, mb.amount, mb.note)); } catch (e) { return ''; } }
@@ -289,7 +290,7 @@ function shareLink(c) { return `${location.origin}${location.pathname.replace(/[
 function sharePayload(c) {
   const t = todayDS(), sh = c.share, months = {};
   for (let i = 0; i < 12; i++) { const ym = addMonths(t.slice(0, 8) + '01', -i).slice(0, 7); const mb = monthBlock(c, ym, false); if (mb.rows.length) months[ym] = mb; }
-  const up = occurrences(addDays(t, 1), addDays(t, 21), { all: true }).filter(o => o.classId === c.id).slice(0, 8).map(o => ({ date: o.date, start: o.start, end: m2t(t2m(o.start) + o.dur) }));
+  const up = occurrences(addDays(t, 1), addDays(t, 21), { all: true }).filter(o => o.classId === c.id && !o.lump).slice(0, 8).map(o => ({ date: o.date, start: o.start, end: m2t(t2m(o.start) + o.dur) }));
   const info = classInfo(c); if (!sh.fee) info.bank = null;
   return { info, show: { content: sh.content !== false, hw: sh.hw !== false, fee: sh.fee !== false }, months, upcoming: up };
 }
@@ -297,7 +298,7 @@ let pubHash = (() => { try { return JSON.parse(localStorage.getItem('lichday_pub
 async function publishShares(force) {
   if (!SYNC.cfg) return;
   for (const c of db.classes) {
-    if (!c.share || !c.share.on) continue;
+    if (!c.share || !c.share.on || isWork(c)) continue;
     const p = sharePayload(c), h = c.share.id + sig(p);
     if (!force && pubHash[c.id] === h) continue;
     await api({ action: 'publish', id: c.share.id, data: { ...p, updatedAt: new Date().toISOString() } });
