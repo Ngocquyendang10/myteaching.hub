@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Checklist học tập</title>
+<meta name="theme-color" content="#f3f1fb">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.getItem('lichday_theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<style>
+:root{
+  --blur:blur(26px) saturate(180%);
+  --bg:#f3f1fb;
+  --mesh:radial-gradient(55% 45% at 0% 0%,#e6dcff 0%,transparent 70%),radial-gradient(45% 40% at 100% 0%,#ffdce9 0%,transparent 70%),radial-gradient(55% 50% at 100% 100%,#d6f0ff 0%,transparent 70%),radial-gradient(50% 50% at 0% 100%,#fff0d2 0%,transparent 70%),radial-gradient(40% 35% at 55% 50%,#e3fbef 0%,transparent 70%);
+  --glass:rgba(255,255,255,.52); --glass-strong:rgba(255,255,255,.80); --glass-brd:rgba(255,255,255,.75);
+  --blur:blur(26px) saturate(180%);
+  --sh-glass:inset 0 1px 0 rgba(255,255,255,.9),0 10px 40px rgba(90,80,150,.10),0 1px 2px rgba(90,80,150,.06);
+  --surface:rgba(255,255,255,.52); --card:rgba(255,255,255,.72); --solid:#fbfaff; --sunk:rgba(120,110,170,.07); --inp:rgba(110,100,170,.075);
+  --ink:#17161f; --ink2:#4f4d5e; --ink3:#9592a6; --line:rgba(60,50,110,.08); --line2:rgba(60,50,110,.14);
+  
+  --brand:#6C63FF; --brand-ink:#574fe6; --brand-sh:rgba(108,99,255,.30);
+  --accent:#17161f; --accent-soft:rgba(60,50,110,.065); --accent-ink:#17161f; --on-accent:#ffffff;
+  --ok:#1f9d6f; --ok-soft:rgba(31,157,111,.12); --warn:#f59e0b; --warn-soft:rgba(245,158,11,.14); --danger:#ef4444; --danger-soft:rgba(239,68,68,.10);
+  --sh-sm:inset 0 1px 0 rgba(255,255,255,.85),0 0 0 1px rgba(255,255,255,.6),0 2px 8px rgba(90,80,150,.07);
+  --sh-md:inset 0 1px 0 rgba(255,255,255,.85),0 0 0 1px rgba(255,255,255,.6),0 8px 26px rgba(90,80,150,.10);
+  --sh-lg:inset 0 1px 0 rgba(255,255,255,.9),0 0 0 1px rgba(255,255,255,.6),0 30px 80px rgba(70,60,130,.22);
+  --neo:var(--sh-sm); --neo-in:inset 0 0 0 1px rgba(60,50,110,.04);
+  --out:rgba(120,110,170,.035); --wkend:rgba(255,255,255,.18); --today-row:rgba(255,226,140,.30);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d0c16;
+  --mesh:radial-gradient(55% 45% at 0% 0%,rgba(110,80,220,.35) 0%,transparent 70%),radial-gradient(45% 40% at 100% 0%,rgba(220,80,140,.22) 0%,transparent 70%),radial-gradient(55% 50% at 100% 100%,rgba(50,130,220,.25) 0%,transparent 70%),radial-gradient(50% 50% at 0% 100%,rgba(230,160,60,.14) 0%,transparent 70%);
+  --glass:rgba(28,27,40,.55); --glass-strong:rgba(30,29,44,.84); --glass-brd:rgba(255,255,255,.09);
+  --sh-glass:inset 0 1px 0 rgba(255,255,255,.07),0 10px 40px rgba(0,0,0,.45);
+  --surface:rgba(28,27,40,.55); --card:rgba(255,255,255,.065); --solid:#1b1a27; --sunk:rgba(255,255,255,.05); --inp:rgba(255,255,255,.07);
+  --ink:#f3f2f8; --ink2:#a9a7bb; --ink3:#6f6c84; --line:rgba(255,255,255,.07); --line2:rgba(255,255,255,.13);
+  --brand:#7b73ff; --brand-ink:#8f88ff; --brand-sh:rgba(123,115,255,.35);
+  --accent:#f3f2f8; --accent-soft:rgba(255,255,255,.08); --accent-ink:#f3f2f8; --on-accent:#17161f;
+  --sh-sm:inset 0 1px 0 rgba(255,255,255,.05),0 0 0 1px rgba(255,255,255,.06); --sh-md:inset 0 1px 0 rgba(255,255,255,.06),0 0 0 1px rgba(255,255,255,.07),0 10px 30px rgba(0,0,0,.4); --sh-lg:inset 0 1px 0 rgba(255,255,255,.07),0 0 0 1px rgba(255,255,255,.08),0 30px 80px rgba(0,0,0,.6);
+  --neo:var(--sh-sm); --neo-in:inset 0 0 0 1px rgba(255,255,255,.04);
+  --out:rgba(0,0,0,.12); --wkend:rgba(255,255,255,.015); --today-row:rgba(250,204,21,.09);
+}}
+:root[data-theme="dark"]{
+  --bg:#0d0c16;
+  --mesh:radial-gradient(55% 45% at 0% 0%,rgba(110,80,220,.35) 0%,transparent 70%),radial-gradient(45% 40% at 100% 0%,rgba(220,80,140,.22) 0%,transparent 70%),radial-gradient(55% 50% at 100% 100%,rgba(50,130,220,.25) 0%,transparent 70%),radial-gradient(50% 50% at 0% 100%,rgba(230,160,60,.14) 0%,transparent 70%);
+  --glass:rgba(28,27,40,.55); --glass-strong:rgba(30,29,44,.84); --glass-brd:rgba(255,255,255,.09);
+  --sh-glass:inset 0 1px 0 rgba(255,255,255,.07),0 10px 40px rgba(0,0,0,.45);
+  --surface:rgba(28,27,40,.55); --card:rgba(255,255,255,.065); --solid:#1b1a27; --sunk:rgba(255,255,255,.05); --inp:rgba(255,255,255,.07);
+  --ink:#f3f2f8; --ink2:#a9a7bb; --ink3:#6f6c84; --line:rgba(255,255,255,.07); --line2:rgba(255,255,255,.13);
+  --brand:#7b73ff; --brand-ink:#8f88ff; --brand-sh:rgba(123,115,255,.35);
+  --accent:#f3f2f8; --accent-soft:rgba(255,255,255,.08); --accent-ink:#f3f2f8; --on-accent:#17161f;
+  --sh-sm:inset 0 1px 0 rgba(255,255,255,.05),0 0 0 1px rgba(255,255,255,.06); --sh-md:inset 0 1px 0 rgba(255,255,255,.06),0 0 0 1px rgba(255,255,255,.07),0 10px 30px rgba(0,0,0,.4); --sh-lg:inset 0 1px 0 rgba(255,255,255,.07),0 0 0 1px rgba(255,255,255,.08),0 30px 80px rgba(0,0,0,.6);
+  --neo:var(--sh-sm); --neo-in:inset 0 0 0 1px rgba(255,255,255,.04);
+  --out:rgba(0,0,0,.12); --wkend:rgba(255,255,255,.015); --today-row:rgba(250,204,21,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body::before{content:'';position:fixed;inset:-10%;z-index:-1;background:var(--mesh),var(--bg);pointer-events:none}
+.glass{background:var(--glass);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border:1px solid var(--glass-brd);box-shadow:var(--sh-glass)}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;-webkit-font-smoothing:antialiased;overflow:hidden}
+h1,h2,h3,h4,.num{font-family:'Nunito','Plus Jakarta Sans',sans-serif}
+.ic{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.seg{display:inline-flex;background:var(--accent-soft);padding:3px;border-radius:12px;gap:2px}
+.seg button{height:32px;padding:0 13px;border-radius:10px;font-weight:700;font-size:13px;color:var(--ink3);transition:all .15s}
+.seg button:hover{color:var(--ink)}
+.seg button.on{background:var(--solid);color:var(--ink);box-shadow:var(--sh-sm)}
+.empty-s{font-size:12.5px;color:var(--ink3);padding:4px 6px}
+:root[data-theme="dark"] .pending-card{color:#ffbb73}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);background:var(--ink);color:var(--solid);padding:11px 18px;border-radius:14px;font-weight:600;font-size:13px;box-shadow:var(--sh-lg);opacity:0;transition:all .25s;z-index:90;pointer-events:none;max-width:calc(100vw - 32px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@keyframes fade{from{opacity:0}}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.98)}}
+.coin{width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,#FFF1B8 0%,#FFD86B 45%,#FFB86B 100%);display:inline-grid;place-items:center;flex:none;box-shadow:0 1px 4px rgba(230,150,40,.45),inset 0 1px 0 rgba(255,255,255,.8)}
+.coin svg{width:62%;height:62%;fill:none;stroke:#8a4b00;stroke-width:3.6;stroke-linecap:round;stroke-linejoin:round}
+@keyframes pulse{50%{opacity:.35}}
+@keyframes shake{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+.ck{width:100%;max-width:560px;margin:0 auto;background:#ffffff;border-radius:26px;overflow:hidden;color:#1d1b29;font-family:'Plus Jakarta Sans',sans-serif;box-shadow:0 12px 40px rgba(80,70,140,.14);text-align:left}
+.ck-h{padding:24px 26px 20px}
+.ck-k{font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#6b6780}
+.ck-title{font-family:Nunito,sans-serif;font-size:30px;font-weight:900;margin:4px 0 12px;letter-spacing:-.3px}
+.ck-meta{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13.5px}
+.ck-meta span{color:#6b6780;font-weight:600}
+.ck-meta b{font-weight:800}
+.ck-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:16px 22px 4px}
+.ck-stats div{background:#f6f5fb;border-radius:14px;padding:10px;text-align:center}
+.ck-stats b{display:block;font-family:Nunito,sans-serif;font-size:19px;font-weight:900}
+.ck-stats span{font-size:10.5px;font-weight:800;color:#8a879b;text-transform:uppercase;letter-spacing:.4px}
+.ck-rows{padding:12px 22px 4px}
+.ck-row{display:grid;grid-template-columns:30px 1fr auto;gap:12px;align-items:start;padding:11px 0;border-bottom:1px dashed #e7e5ef}
+.ck-row:last-child{border-bottom:0}
+.ck-row .ck-n{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-family:Nunito,sans-serif;font-weight:900;font-size:13px}
+.ck-row b{font-size:14px;font-weight:800}
+.ck-row small{color:#8a879b;font-weight:600;font-size:12px;margin-left:6px}
+.ck-row p{font-size:12.5px;color:#4f4c60;margin-top:3px;line-height:1.5;white-space:pre-wrap}
+.ck-row p i{font-style:normal;font-weight:800;color:#8a879b}
+.ck-row .ck-h2{font-family:Nunito,sans-serif;font-weight:900;font-size:14px;white-space:nowrap;text-align:right}
+.ck-row .ck-h2 .coin{margin-left:6px;vertical-align:-3px;display:inline-grid}
+.ck-row.up{opacity:.55}
+.ck-total{margin:12px 22px 0;border-radius:18px;padding:16px 18px;background:linear-gradient(135deg,#FFF4C9,#FFE09A 55%,#FFC98A);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ck-total span{font-size:12.5px;font-weight:800;color:#8a4b00}
+.ck-total b{font-family:Nunito,sans-serif;font-size:28px;font-weight:900;color:#3b2400}
+.ck-pay{display:grid;grid-template-columns:132px 1fr;gap:16px;align-items:center;margin:14px 22px 0;padding:14px;border-radius:18px;background:#f6f5fb}
+.ck-pay img{width:132px;height:132px;border-radius:12px;background:#fff;image-rendering:pixelated}
+.ck-pay div{font-size:13px;line-height:1.7}
+.ck-pay span{color:#8a879b;font-weight:600}
+.ck-pay b{font-weight:800}
+.ck-pay .ck-note{display:inline-block;margin-top:4px;background:#fff;border-radius:8px;padding:2px 8px;font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:12.5px}
+.ck-f{padding:16px 22px 20px;font-size:11px;color:#a3a0b4;text-align:center;font-weight:600}
+.ck-empty{padding:26px;text-align:center;color:#8a879b;font-size:13px}
+.ck-modal{display:grid;grid-template-columns:240px 1fr;gap:18px;align-items:start}
+.ck-modal .ck-prev{background:var(--sunk);border-radius:18px;padding:16px;max-height:70dvh;overflow:auto}
+.ck-opts{display:flex;flex-direction:column;gap:12px}
+.stu{min-height:100dvh;padding:22px 16px 40px;display:flex;flex-direction:column;align-items:center;gap:16px;overflow:auto;height:100dvh}
+.stu>*{flex:none;width:100%;max-width:560px}
+.stu-tabs{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.stu-up{width:100%;max-width:560px;border-radius:22px;padding:16px 18px}
+.stu-up h4{font-size:14px;font-weight:900;margin-bottom:8px}
+.stu-up div{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;border-bottom:1px dashed var(--line2);font-weight:600}
+.stu-up div:last-child{border-bottom:0}
+@media (max-width:720px){.ck-modal{grid-template-columns:1fr}
+.ck-pay{grid-template-columns:1fr;justify-items:center;text-align:center}}
+@media (max-width:640px){.seg button{padding:0 9px}}
+@media print{body{overflow:visible;background:#fff}}
+</style>
+</head>
+<body>
+<div class="stu" id="stu"></div>
+<div class="toast" id="toast"></div>
+<script>
+'use strict';
+
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const pad = n => String(n).padStart(2, '0');
+const uid = () => Math.random().toString(36).slice(2, 9) + Date.now().toString(36).slice(-4);
+const toDS = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const fromDS = s => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+const addDays = (s, n) => { const d = fromDS(s); d.setDate(d.getDate() + n); return toDS(d); };
+const addMonths = (s, n) => { const d = fromDS(s); d.setDate(1); d.setMonth(d.getMonth() + n); return toDS(d); };
+const endOfMonth = s => { const d = fromDS(s); return toDS(new Date(d.getFullYear(), d.getMonth() + 1, 0)); };
+const dow = s => fromDS(s).getDay();
+const diffDays = (a, b) => Math.round((fromDS(b) - fromDS(a)) / 864e5);
+const todayDS = () => toDS(new Date());
+const nowMin = () => { const d = new Date(); return d.getHours() * 60 + d.getMinutes(); };
+const t2m = t => { const [h, m] = (t || '0:0').split(':').map(Number); return h * 60 + (m || 0); };
+const m2t = m => `${pad(Math.floor(m / 60) % 24)}:${pad(m % 60)}`;
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const money = n => Math.round(n || 0).toLocaleString('vi-VN') + 'đ';
+const fmtH = h => (Math.round((h || 0) * 100) / 100).toLocaleString('vi-VN');
+const parseNum = s => { const v = parseFloat(String(s).replace(/\s/g, '').replace(',', '.')); return isNaN(v) ? null : v; };
+const WD = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
+const WDF = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
+const fmtDate = s => { const d = fromDS(s); return `${WDF[d.getDay()]}, ${pad(d.getDate())}/${pad(d.getMonth() + 1)}/${d.getFullYear()}`; };
+const fmtShort = s => { const d = fromDS(s); return `${WD[d.getDay()]} ${pad(d.getDate())}/${pad(d.getMonth() + 1)}`; };
+const monthTitle = s => { const d = fromDS(s); return `Tháng ${d.getMonth() + 1}, ${d.getFullYear()}`; };
+const PALETTE = ['#8EB8FF', '#A99BFF', '#FF9EB5', '#6FD3AE', '#FFB27A', '#E3CF4F', '#7CCFE6', '#F39AD9', '#B4C860', '#C3A7F2', '#FF8C8C', '#9AA9C9'];
+const PERSONAL = '_personal';
+const durLabel = m => { const h = Math.floor(m / 60), r = m % 60; return h ? (r ? `${h}h${pad(r)}` : `${h}h`) : `${r} phút`; };
+
+
+
+const fmtDM = s => `${s.slice(8)}/${s.slice(5, 7)}`;
+
+
+const CHK = '<svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>';
+const COIN_SRC = (() => { // dấu ✓ vàng vẽ sẵn thành PNG để xuất ảnh không bị mất
+  const s = 72, cv = document.createElement('canvas'); cv.width = cv.height = s; const x = cv.getContext('2d');
+  const g = x.createLinearGradient(0, 0, s, s); g.addColorStop(0, '#FFF1B8'); g.addColorStop(.45, '#FFD86B'); g.addColorStop(1, '#FFB86B');
+  x.fillStyle = g; x.beginPath(); x.arc(s / 2, s / 2, s / 2 - 1, 0, Math.PI * 2); x.fill();
+  x.strokeStyle = '#8a4b00'; x.lineWidth = 7; x.lineCap = 'round'; x.lineJoin = 'round';
+  x.beginPath(); x.moveTo(20, 37); x.lineTo(31, 47); x.lineTo(52, 25); x.stroke();
+  return cv.toDataURL('image/png');
+})();
+const COIN_IMG = `<img alt="✓" width="18" height="18" style="vertical-align:-4px;margin-left:6px" src="${COIN_SRC}">`;
+
+
+/* ---------- CHECKLIST học phí + QR chuyển khoản ---------- */
+const BANKS = [['970436', 'Vietcombank'], ['970407', 'Techcombank'], ['970422', 'MB Bank'], ['970416', 'ACB'], ['970418', 'BIDV'], ['970415', 'VietinBank'], ['970405', 'Agribank'], ['970432', 'VPBank'], ['970423', 'TPBank'], ['970403', 'Sacombank'], ['970437', 'HDBank'], ['970441', 'VIB'], ['970443', 'SHB'], ['970426', 'MSB'], ['970448', 'OCB'], ['970440', 'SeABank'], ['970431', 'Eximbank'], ['970428', 'Nam A Bank'], ['970454', 'Timo / BVBank'], ['546034', 'Cake by VPBank'], ['970452', 'KienlongBank']];
+const libs = {};
+const loadScript = src => libs[src] ||= new Promise((res, rej) => { const s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = () => { delete libs[src]; rej(new Error('Không tải được thư viện, kiểm tra mạng')); }; document.head.appendChild(s); });
+const QR_LIB = 'https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js';
+const H2C_LIB = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+async function qrDataURL(text) { await loadScript(QR_LIB); const q = qrcode(0, 'M'); q.addData(text); q.make(); return q.createDataURL(6, 2); }
+const tlv = (id, v) => id + String(v.length).padStart(2, '0') + v;
+function crc16(s) { let c = 0xFFFF; for (let i = 0; i < s.length; i++) { c ^= s.charCodeAt(i) << 8; for (let j = 0; j < 8; j++) c = c & 0x8000 ? ((c << 1) ^ 0x1021) & 0xFFFF : (c << 1) & 0xFFFF; } return c.toString(16).toUpperCase().padStart(4, '0'); }
+const noAccent = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').replace(/[^A-Za-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+function vietQR(bin, acct, amount, info) {
+  const mai = tlv('00', 'A000000727') + tlv('01', tlv('00', bin) + tlv('01', acct)) + tlv('02', 'QRIBFTTA');
+  let s = tlv('00', '01') + tlv('01', amount ? '12' : '11') + tlv('38', mai) + tlv('53', '704') + (amount ? tlv('54', String(Math.round(amount))) : '') + tlv('58', 'VN') + (info ? tlv('62', tlv('08', info.slice(0, 50))) : '') + '6304';
+  return s + crc16(s);
+}
+const payCfg = () => db.settings.pay || {};
+function transferNote(c, ym) { const tpl = payCfg().note || 'HP T{thang} {lop}'; return noAccent(tpl.replace('{thang}', +ym.slice(5)).replace('{nam}', ym.slice(0, 4)).replace('{lop}', c.short || shortName(c.name)).replace('{hocvien}', c.student || '')).toUpperCase().slice(0, 50); }
+function monthBlock(c, ym, onlyDone) {
+  const idx = sessionIndex(c), from = ym + '-01', to = endOfMonth(from);
+  const occ = occurrences(from, to, { all: true }).filter(o => o.classId === c.id && occStatus(o) !== 'cancel');
+  const rows = occ.filter(o => onlyDone ? counted(occStatus(o)) : (counted(occStatus(o)) || occStatus(o) === 'upcoming')).map(o => { const r = o.rec || {}; return { n: idx[o.key] || 0, date: o.date, start: o.start, end: m2t(t2m(o.start) + o.dur), hours: billHours(o), done: counted(occStatus(o)), taught: r.taught || '', homework: r.homework || '', links: (r.links || []).map(l => ({ url: l.url, title: l.title || '' })) }; });
+  const done = rows.filter(r => r.done), totalH = done.reduce((a, r) => a + r.hours, 0), rate = rateFor(c, ym);
+  return { ym, rows, sessions: done.length, totalH, rate, amount: totalH * rate, note: transferNote(c, ym) };
+}
+const hexRgba = (h, a) => { const n = parseInt(h.slice(1), 16); return `rgba(${n >> 16 & 255},${n >> 8 & 255},${n & 255},${a})`; };
+function checklistHTML(info, mb, show, qr) {
+  const col = info.color || '#A99BFF';
+  const [y, m] = mb.ym.split('-');
+  return `<div class="ck">
+    <div class="ck-h" style="background:linear-gradient(135deg,${hexRgba(col, .45)},${hexRgba(col, .12)} 70%,#ffffff)">
+      <div class="ck-k">Checklist buổi học${show.fee ? ' & học phí' : ''}</div>
+      <div class="ck-title">Tháng ${+m}/${y}</div>
+      <div class="ck-meta"><span>Lớp</span><b>${esc(info.name)}</b>${info.student ? `<span>Học viên</span><b>${esc(info.student)}</b>` : ''}${info.teacher ? `<span>Giáo viên</span><b>${esc(info.teacher)}</b>` : ''}</div>
+    </div>
+    <div class="ck-stats"><div><b>${mb.sessions}</b><span>Buổi đã học</span></div><div><b>${fmtH(mb.totalH)}</b><span>Tổng giờ</span></div><div><b>${show.fee ? money(mb.rate).replace('.000đ', 'k') : (mb.rows.length - mb.sessions)}</b><span>${show.fee ? 'Học phí/giờ' : 'Buổi sắp tới'}</span></div></div>
+    <div class="ck-rows">${mb.rows.length ? mb.rows.map(r => `<div class="ck-row ${r.done ? '' : 'up'}">
+      <span class="ck-n" style="background:${hexRgba(col, .25)}">${r.n || '·'}</span>
+      <div><b>${WDF[dow(r.date)]}, ${fmtDM(r.date)}</b><small>${r.start}–${r.end}</small>
+        ${show.content && r.taught ? `<p><i>Đã học:</i> ${esc(r.taught)}</p>` : ''}${show.hw && r.homework ? `<p><i>Bài tập:</i> ${esc(r.homework)}</p>` : ''}${!r.done ? '<p><i>Sắp tới</i></p>' : ''}</div>
+      <div class="ck-h2">${fmtH(r.hours)}h${r.done ? COIN_IMG : ''}</div></div>`).join('') : '<div class="ck-empty">Chưa có buổi học nào trong tháng này.</div>'}</div>
+    ${show.fee ? `<div class="ck-total"><span>Tổng học phí<br>${fmtH(mb.totalH)} giờ × ${money(mb.rate)}</span><b>${money(mb.amount)}</b></div>
+      ${info.bank && info.bank.acct ? `<div class="ck-pay">${qr ? `<img src="${qr}" alt="QR chuyển khoản">` : '<span></span>'}<div><span>Ngân hàng</span> <b>${esc(info.bank.bankName || '')}</b><br><span>Số tài khoản</span> <b>${esc(info.bank.acct)}</b><br>${info.bank.holder ? `<span>Chủ tài khoản</span> <b>${esc(info.bank.holder)}</b><br>` : ''}<span>Nội dung CK</span><br><span class="ck-note">${esc(mb.note)}</span></div></div>` : ''}` : ''}
+    <div class="ck-f">Cập nhật ${new Date().toLocaleDateString('vi-VN')} · Lịch Dạy</div></div>`;
+}
+function classInfo(c) { const p = payCfg(); return { name: c.name, student: c.student || '', color: c.color, teacher: p.teacher || '', bank: p.acct ? { bin: p.bin, bankName: (BANKS.find(b => b[0] === p.bin) || [, ''])[1], acct: p.acct, holder: p.holder || '' } : null }; }
+async function payQR(info, mb) { if (!info.bank || !info.bank.acct || !info.bank.bin || !mb.amount) return ''; try { return await qrDataURL(vietQR(info.bank.bin, info.bank.acct, mb.amount, mb.note)); } catch (e) { return ''; } }
+function openChecklist(classId, ym) {
+  const c = clsById(classId); if (!c) return;
+  const opt = { ym, onlyDone: true, content: true, hw: true, fee: true };
+  const m = openModal('', 'wide', null);
+  const draw = async () => {
+    const mb = monthBlock(c, opt.ym, opt.onlyDone), info = classInfo(c), show = { content: opt.content, hw: opt.hw, fee: opt.fee };
+    $('.modal', m).innerHTML = `<div class="m-h"><h3>Xuất checklist · ${esc(c.name)}</h3><button class="ibtn sm" data-x>${ic('x')}</button></div>
+      <div class="m-b"><div class="ck-modal"><div class="ck-opts">
+        <div class="navgrp" style="align-self:flex-start"><button class="ibtn" data-mm="-1">${ic('chevL')}</button><span class="today-btn" style="display:grid;place-items:center">Tháng ${+opt.ym.slice(5)}/${opt.ym.slice(0, 4)}</span><button class="ibtn" data-mm="1">${ic('chevR')}</button></div>
+        <label class="sw"><input type="checkbox" data-o="onlyDone" ${opt.onlyDone ? 'checked' : ''}><i></i>Chỉ buổi đã dạy</label>
+        <label class="sw"><input type="checkbox" data-o="content" ${opt.content ? 'checked' : ''}><i></i>Nội dung đã học</label>
+        <label class="sw"><input type="checkbox" data-o="hw" ${opt.hw ? 'checked' : ''}><i></i>Bài tập về nhà</label>
+        <label class="sw"><input type="checkbox" data-o="fee" ${opt.fee ? 'checked' : ''}><i></i>Học phí & QR</label>
+        ${opt.fee && !payCfg().acct ? `<p class="hint">Thêm tài khoản trong Cài đặt để hiện QR.</p>` : ''}
+        ${!c.student ? `` : ''}
+        <button class="btn primary" data-png>${ic('image')}Ảnh</button>
+        <button class="btn" data-print>${ic('print')}In / PDF</button>
+        <button class="btn" data-text>${ic('copy')}Chép chữ</button>
+        <button class="btn ghost" data-share>${ic('link')}Link cho học viên</button>
+      </div><div class="ck-prev" id="ckPrev">${checklistHTML(info, mb, show, '')}</div></div></div>`;
+    const qr = show.fee ? await payQR(info, mb) : '';
+    if (qr && $('#ckPrev', m)) $('#ckPrev', m).innerHTML = checklistHTML(info, mb, show, qr);
+    m._mb = mb; m._show = show; m._info = info;
+  };
+  m.addEventListener('change', e => { const k = e.target.dataset.o; if (k) { opt[k] = e.target.checked; draw(); } });
+  m.addEventListener('click', async e => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (b.hasAttribute('data-x')) return closeModal(m);
+    if (b.dataset.mm) { opt.ym = addMonths(opt.ym + '-01', +b.dataset.mm).slice(0, 7); return draw(); }
+    if (b.hasAttribute('data-share')) { closeModal(m); return openShare(c.id); }
+    if (b.hasAttribute('data-text')) {
+      const mb = m._mb, L = [`CHECKLIST THÁNG ${+mb.ym.slice(5)}/${mb.ym.slice(0, 4)} — ${c.name}${c.student ? ' (' + c.student + ')' : ''}`];
+      mb.rows.forEach(r => { L.push(`${r.done ? '✅' : '⏳'} Buổi ${r.n || '-'} · ${WDF[dow(r.date)]} ${fmtDM(r.date)} · ${fmtH(r.hours)}h${opt.content && r.taught ? ' — ' + r.taught : ''}`); if (opt.hw && r.homework) L.push('   BTVN: ' + r.homework); });
+      if (opt.fee) { L.push(`Tổng: ${mb.sessions} buổi · ${fmtH(mb.totalH)} giờ × ${money(mb.rate)} = ${money(mb.amount)}`); const p = m._info.bank; if (p) L.push(`CK: ${p.bankName} · ${p.acct}${p.holder ? ' · ' + p.holder : ''} · ND: ${mb.note}`); }
+      try { await navigator.clipboard.writeText(L.join('\n')); toast('Đã sao chép — dán vào Zalo/Messenger'); } catch (er) { toast('Trình duyệt chặn sao chép'); }
+    }
+    if (b.hasAttribute('data-print')) { const w = open('', '_blank'); if (!w) return toast('Hãy cho phép cửa sổ bật lên'); w.document.write(`<html><head><meta charset="utf-8"><title>Checklist</title><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Nunito:wght@800;900&family=IBM+Plex+Mono:wght@700&display=swap" rel="stylesheet"><style>${[...document.styleSheets[document.styleSheets.length - 1].cssRules].filter(r => r.selectorText && r.selectorText.includes('.ck')).map(r => r.cssText).join('\n')} body{margin:24px;font-family:'Plus Jakarta Sans'} .ck{box-shadow:none;border:1px solid #eee} .coin{display:inline-grid;width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,#FFF1B8,#FFD86B 45%,#FFB86B);place-items:center} .coin svg{width:62%;height:62%;fill:none;stroke:#8a4b00;stroke-width:3.6}</style></head><body>${$('#ckPrev', m).innerHTML}</body></html>`); w.document.close(); setTimeout(() => w.print(), 800); }
+    if (b.hasAttribute('data-png')) {
+      try {
+        b.disabled = true; b.textContent = 'Đang tạo ảnh…';
+        await loadScript(H2C_LIB);
+        const el = $('#ckPrev .ck', m);
+        await Promise.all($$('img', el).map(i => i.decode ? i.decode().catch(() => {}) : 0));
+        const canvas = await html2canvas(el, { scale: 2, backgroundColor: null, useCORS: true });
+        const blob = await new Promise(r => canvas.toBlob(r, 'image/png'));
+        const name = `checklist-${noAccent(c.name).replace(/ /g, '-')}-${opt.ym}.png`;
+        const file = new File([blob], name, { type: 'image/png' });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) await navigator.share({ files: [file], title: 'Checklist học phí' }).catch(() => {});
+        else { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; a.click(); }
+      } catch (er) { toast(er.message || 'Không tạo được ảnh'); }
+      draw();
+    }
+  });
+  draw();
+}
+
+/* ---------- CHIA SẺ checklist cho học viên (link riêng, chỉ xem) ---------- */
+const randId = () => b64u(rand(15));
+function shareLink(c) { return `${location.origin}${location.pathname.replace(/[^/]*$/, '')}student.html?s=${c.share.id}&a=${btoa(SYNC.cfg.url).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')}`; }
+function sharePayload(c) {
+  const t = todayDS(), sh = c.share, months = {};
+  for (let i = 0; i < 12; i++) { const ym = addMonths(t.slice(0, 8) + '01', -i).slice(0, 7); const mb = monthBlock(c, ym, false); if (mb.rows.length) months[ym] = mb; }
+  const up = occurrences(addDays(t, 1), addDays(t, 21), { all: true }).filter(o => o.classId === c.id).slice(0, 8).map(o => ({ date: o.date, start: o.start, end: m2t(t2m(o.start) + o.dur) }));
+  const info = classInfo(c); if (!sh.fee) info.bank = null;
+  return { info, show: { content: sh.content !== false, hw: sh.hw !== false, fee: sh.fee !== false }, months, upcoming: up };
+}
+let pubHash = (() => { try { return JSON.parse(localStorage.getItem('lichday_pub')) || {}; } catch (e) { return {}; } })();
+async function publishShares(force) {
+  if (!SYNC.cfg) return;
+  for (const c of db.classes) {
+    if (!c.share || !c.share.on) continue;
+    const p = sharePayload(c), h = c.share.id + sig(p);
+    if (!force && pubHash[c.id] === h) continue;
+    await api({ action: 'publish', id: c.share.id, data: { ...p, updatedAt: new Date().toISOString() } });
+    pubHash[c.id] = h; localStorage.setItem('lichday_pub', JSON.stringify(pubHash));
+  }
+}
+function openShare(classId) {
+  const c = clsById(classId); if (!c) return;
+  const m = openModal('', '', null);
+  const draw = async () => {
+    const sh = c.share;
+    $('.modal', m).innerHTML = `<div class="m-h"><h3>Chia sẻ cho học viên</h3><button class="ibtn sm" data-x>${ic('x')}</button></div>
+      <div class="m-b">
+        <p class="hint">Học viên chỉ xem được checklist của lớp này.</p>
+        ${!SYNC.cfg ? `<p class="hint" style="color:#c46a0c">Cần bật đồng bộ trước (Cài đặt).</p>` : `
+        <label class="sw"><input type="checkbox" data-on ${sh && sh.on ? 'checked' : ''}><i></i>Cho phép xem bằng link</label>
+        ${sh && sh.on ? `
+          <div class="row"><label class="sw"><input type="checkbox" data-o="content" ${sh.content !== false ? 'checked' : ''}><i></i>Nội dung học</label><label class="sw"><input type="checkbox" data-o="hw" ${sh.hw !== false ? 'checked' : ''}><i></i>Bài tập</label><label class="sw"><input type="checkbox" data-o="fee" ${sh.fee !== false ? 'checked' : ''}><i></i>Học phí & QR</label></div>
+          <div class="share-link"><input class="inp" readonly value="${esc(shareLink(c))}" id="shLink"><button class="btn sm primary" data-copy>${ic('copy')}Sao chép</button></div>
+          <div class="share-qr"><img id="shQR" alt=""><div class="hint">Gửi link hoặc cho quét mã.<br><br><button class="btn sm ghost" data-renew>Đổi link mới</button></div></div>` : ''}`}
+      </div>`;
+    const qi = $('#shQR', m); if (qi) qi.src = await qrDataURL(shareLink(c)).catch(() => '');
+  };
+  const publish = async () => { try { await publishShares(true); toast('Đã cập nhật link cho học viên'); } catch (e) { toast(e.message); } };
+  m.addEventListener('change', async e => {
+    if (e.target.hasAttribute('data-on')) {
+      if (e.target.checked) { c.share = { ...(c.share || {}), id: (c.share && c.share.id) || randId(), on: true }; save(); await draw(); publish(); }
+      else { const id = c.share.id; c.share.on = false; save(); draw(); api({ action: 'unpublish', id }).catch(() => {}); delete pubHash[c.id]; toast('Đã tắt link chia sẻ'); }
+      render();
+    }
+    const k = e.target.dataset.o; if (k) { c.share[k] = e.target.checked; save(); publish(); }
+  });
+  m.addEventListener('click', async e => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (b.hasAttribute('data-x')) return closeModal(m);
+    if (b.hasAttribute('data-copy')) { try { await navigator.clipboard.writeText(shareLink(c)); toast('Đã sao chép link'); } catch (er) { $('#shLink', m).select(); } }
+    if (b.hasAttribute('data-renew')) {
+      if (!await confirmDlg('Đổi link mới?', 'Link cũ sẽ ngừng hoạt động. Bạn cần gửi link mới cho học viên.', 'Đổi link')) return;
+      const old = c.share.id; c.share.id = randId(); save(); api({ action: 'unpublish', id: old }).catch(() => {}); await draw(); publish();
+    }
+  });
+  draw();
+}
+
+/* ---------- TRANG HỌC VIÊN (chỉ xem, không cần đăng nhập) ---------- */
+async function studentMode(id, api64) {
+  document.body.innerHTML = '<div class="stu" id="stu"><div class="empty-s" style="padding:60px">Đang tải…</div></div><div class="toast" id="toast"></div>';
+  let url; try { url = atob(api64.replace(/-/g, '+').replace(/_/g, '/')); } catch (e) {}
+  const box = $('#stu');
+  if (!url || !/^https:\/\/script\.google(usercontent)?\.com\//.test(url)) { box.innerHTML = '<div class="ck"><div class="ck-empty">Link không hợp lệ.</div></div>'; return; }
+  let data = null, cur = null;
+  const load = async () => {
+    try {
+      const r = await fetch(url, { method: 'POST', body: JSON.stringify({ action: 'share', id }) }); const j = await r.json();
+      if (!j.ok) { box.innerHTML = '<div class="ck"><div class="ck-empty">Link này đã hết hiệu lực. Hãy hỏi lại giáo viên nhé.</div></div>'; return; }
+      data = j.data; draw();
+    } catch (e) { if (!data) box.innerHTML = '<div class="ck"><div class="ck-empty">Không tải được, kiểm tra mạng rồi thử lại.</div></div>'; }
+  };
+  const draw = async () => {
+    const months = Object.keys(data.months).sort().reverse();
+    cur ||= months[0];
+    document.title = `Checklist · ${data.info.name}`;
+    const mb = data.months[cur];
+    box.innerHTML = `<div class="stu-tabs seg">${months.map(k => `<button class="${k === cur ? 'on' : ''}" data-m="${k}">Tháng ${+k.slice(5)}/${k.slice(2, 4)}</button>`).join('')}</div>
+      ${mb ? checklistHTML(data.info, mb, data.show, '') : '<div class="ck"><div class="ck-empty">Chưa có dữ liệu.</div></div>'}
+      ${data.upcoming && data.upcoming.length ? `<div class="stu-up glass"><h4>📅 Lịch học sắp tới</h4>${data.upcoming.map(u => `<div><span>${WDF[dow(u.date)]}, ${fmtDM(u.date)}</span><b>${u.start}–${u.end}</b></div>`).join('')}</div>` : ''}
+      <div class="hint" style="font-size:11.5px">Trang chỉ xem · cập nhật lúc ${new Date(data.updatedAt).toLocaleString('vi-VN')}</div>`;
+    if (mb && data.show.fee && data.info.bank) { const qr = await payQR(data.info, mb); if (qr) { const ck = $('.ck', box); if (ck) ck.outerHTML = checklistHTML(data.info, mb, data.show, qr); } }
+  };
+  box.addEventListener('click', e => { const b = e.target.closest('[data-m]'); if (b) { cur = b.dataset.m; draw(); } });
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') load(); });
+  load();
+}
+
+
+(function () {
+  const qs = new URLSearchParams(location.search);
+  if (qs.get('s') && qs.get('a')) studentMode(qs.get('s'), qs.get('a'));
+  else document.getElementById('stu').innerHTML = '<div class="ck"><div class="ck-empty">Link không hợp lệ. Hãy hỏi lại giáo viên nhé.</div></div>';
+})();
+</script>
+</body>
+</html>
